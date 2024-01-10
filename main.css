@@ -1,0 +1,81 @@
+@import url("https://fonts.cdnfonts.com/css/wix-madefor-text");
+@import url("https://rsms.me/inter/inter.css");
+
+:root {
+	font-size: 16px;
+}
+body {
+  box-sizing: border-box;
+  margin: 0;
+  font-family: Wix Madefor Display, sans-serif;
+  background: #fdf6f2;
+  padding: 35px min(47px, 4.3vw);
+  font-size: 120%;
+  padding-bottom: 10px;
+  min-height: 100dvh;
+  /* min-height: calc(100svh - 10px); */
+}
+h1 {
+    padding-top: 12px;
+    margin: 3px 0 0;
+    color: #000;
+    font-family: Inter;
+    font-size: 27px;
+    font-weight: 300;
+    line-height: 114%;
+    letter-spacing: -.2px;
+    text-transform: uppercase;
+}
+@media screen and (min-width: 850px) {
+	body {
+		font-size: 140%;
+	}
+	.logo {
+		position: absolute;
+	}
+	h1 {
+    font-size: 40px;
+    font-style: italic;
+    text-align: center;
+    /* padding-top: 12px; */
+    margin: 0 0 clamp(36px, calc(100vh - 782px), 110px);
+ }
+}
+@media screen and (max-width: 650px) {
+	body {
+		padding: 20px 10px;
+		font-size: 100%;
+	}
+	h1 {
+	    margin: 5px 0 -2px;
+	    font-size: 17.122px;
+	    font-style: normal;
+	    letter-spacing: -.086px;
+	    text-transform: uppercase;
+	    flex-grow: 0.7;
+	}
+}
+@media screen and (max-width: 600px) {
+	body {
+		display: flex;
+		flex-direction: column;
+	}
+
+	body:after {
+	     content: '';
+	     flex-grow: 0.7;
+	}
+
+body:before {
+    /* content: ''; */
+    position: absolute;
+    height: 100svh;
+    left: 0;
+    top: 0;
+    width: 20px;
+    background: #f908;
+}
+	.logo {
+		min-height: 50px;
+	}
+}

@@ -1,0 +1,264 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <!-- <link rel="icon" type="image/svg+xml" href="/pt.svg" /> -->
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="Cache-Control" content="no-cache" />
+  <title>New Wave 15 player</title>
+  <link rel="stylesheet" type="text/css" href="main.css">
+  <link rel="stylesheet" type="text/css" href="hdrum.css">
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script type="module" src="hdrum.js"></script>
+</head>
+
+<body>
+  <svg class="logo" width="129" height="50" viewBox="0 0 129 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path
+      d="M4.99542 23H1.40458V0.076337H5.31603L18.3328 19.3771H17.0824V0.076337H20.6733V23H16.7618L3.71298 3.69924H4.99542V23ZM39.6847 23H23.9107V0.076337H39.6847V3.21832H27.5977V19.858H39.6847V23ZM39.0756 12.9328H27.2771V9.79084H39.0756V12.9328ZM65.7915 23H61.6556L56.3976 4.59695H56.8464L51.5564 23H47.4205L40.6876 0.076337H44.6312L50.0815 20.1145H49.0876L54.8586 0.076337H58.3854L64.1563 20.1145H63.2586L68.677 0.076337H72.5243L65.7915 23ZM25.258 49H21.1221L15.8641 30.5969H16.313L11.0229 49H6.88702L0.154198 26.0763H4.09771L9.54809 46.1145H8.5542L14.3252 26.0763H17.8519L23.6229 46.1145H22.7252L28.1435 26.0763H31.9908L25.258 49ZM46.8965 43.4855H33.6873V40.3435H46.8965V43.4855ZM51.4491 49H47.5377L39.6827 28.5771H40.9011L33.0461 49H29.2629L38.3362 26.0763H42.3759L51.4491 49ZM60.427 49H56.6438L47.6667 26.0763H51.6423L59.1766 46.3069H58.0224L65.5568 26.0763H69.4362L60.427 49ZM87.0437 49H71.2696V26.0763H87.0437V29.2183H74.9567V45.858H87.0437V49ZM86.4345 38.9328H74.6361V35.7908H86.4345V38.9328Z"
+      fill="black"></path>
+    <path
+      d="M96.3987 24.5223H107.938V49H105.106L105.141 26.9701H96.3987V24.5223ZM124.938 24.2776V32.9846L127.771 33.0545V24.2776H124.938ZM108.993 29.313C108.993 25.7112 111.196 24.3125 115.147 24.2776L124.938 24.3125V26.7253H115.322C113.923 26.7253 112.28 27.3897 112.315 29.1381C112.35 30.8516 118.154 30.8166 123.679 33.2294C126.302 34.4183 128.155 36.6563 128.015 40.7126C127.771 46.0976 123.504 49.2448 117.42 48.9301C106.545 48.3706 108.118 36.0968 111.72 34.0337H112.49C108.468 36.2017 107.769 47.2516 118.014 46.4823C122.071 46.1676 125.218 44.2443 125.218 40.7126C125.218 30.8516 108.993 35.2925 108.993 29.313Z"
+      fill="#6CAFAE"></path>
+  </svg>
+  <h1>Виртуальный плеер</h1>
+
+  <div id="hdrum-vidget">
+    <dl class="hd-controls hd-notes">
+      <div data-petal="0">
+        <dt>0</dt>
+        <dd>тук</dd>
+      </div>
+      <div data-petal="1">
+        <dt>1</dt>
+        <dd>G</dd>
+      </div>
+      <div data-petal="2">
+        <dt>2</dt>
+        <dd>A</dd>
+      </div>
+      <div data-petal="3">
+        <dt>3</dt>
+        <dd>B</dd>
+      </div>
+      <div data-petal="4">
+        <dt>4</dt>
+        <dd>C</dd>
+      </div>
+      <div data-petal="5">
+        <dt>5</dt>
+        <dd>D</dd>
+      </div>
+      <div data-petal="6">
+        <dt>6</dt>
+        <dd>E</dd>
+      </div>
+      <div data-petal="7">
+        <dt>7</dt>
+        <dd>F<sub>#</sub></dd>
+      </div>
+      <div data-petal="8">
+        <dt>8</dt>
+        <dd>G</dd>
+      </div>
+      <div data-petal="9">
+        <dt>9</dt>
+        <dd>A</dd>
+      </div>
+      <div data-petal="10">
+        <dt>Q</dt>
+        <dd>B</dd>
+      </div>
+      <div data-petal="11">
+        <dt>W</dt>
+        <dd>C</dd>
+      </div>
+      <div data-petal="12">
+        <dt>E</dt>
+        <dd>D</dd>
+      </div>
+      <div data-petal="13">
+        <dt>R</dt>
+        <dd>E</dd>
+      </div>
+      <div data-petal="14">
+        <dt>T</dt>
+        <dd>F<sub>#</sub></dd>
+      </div>
+      <div data-petal="15">
+        <dt>Y</dt>
+        <dd>G</dd>
+      </div>
+    </dl>
+    <div class="hd-controls hd-main">
+      <button class="hd-gamma"><svg width="51" height="51" style="overflow: visible;">
+          <use href="#playpath" />
+          <g stroke="currentColor" fill="none" stroke-width="1" stroke-linecap="round">
+            <circle cx="50%" cy="50%" r="25" pathLength="1" style="stroke-dasharray: .96, .04;
+      stroke-dashoffset: 0.21;" />
+            <path d="M19 0.5 h6.5 v6.5" transform="rotate(39, 25.5, 0.5)" stroke-width="1.7px" />
+          </g>
+          <circle cx=31.5 cy=1.6 r=2.4 fill=currentColor />
+        </svg></button>
+      <div class="hd-drum">
+        <svg width="484" height="484" fill="none" version="1.1" viewBox="0 0 484 473">
+          <filter id="hd-glow" color-interpolation-filters="sRGB" height="300%" width="300%" x="-100%" y="-100%">
+
+            <feMorphology operator="dilate" radius="1.8" result="thicken" />
+
+            <feGaussianBlur stdDeviation="4" result=1 />
+            <feGaussianBlur stdDeviation="3" result=2 />
+            <feGaussianBlur stdDeviation="5" result=3 />
+            <feGaussianBlur stdDeviation="5" result=4 />
+            <feGaussianBlur stdDeviation="5" result=5 />
+            <feGaussianBlur stdDeviation="10" result="6" />
+            <feGaussianBlur stdDeviation="10" result="7" />
+
+            <!--	Layer the effects together -->
+            <feMerge>
+              <feMergeNode in="6" />
+              <feMergeNode in="5" />
+              <feMergeNode in="1" />
+              <feMergeNode in="3" />
+              <feMergeNode in="SourceGraphic" />
+              <feMergeNode in="7" />
+              <feMergeNode in="7" />
+            </feMerge>
+          </filter>
+
+          <filter id="hd-dark" color-interpolation-filters="sRGB">
+            <feColorMatrix values="2 0 0 0 -1 0 2 0 0 -1 0 0 2 0 -1 0 0 0 1 0"></feColorMatrix>
+          </filter>
+
+          <g transform="matrix(1.16 0 0 1.16 -30.3 -29.7)">
+            <g data-petal="1">
+              <path
+                d="m272 188v64.3c1.23 19.9-8.99 29-22.8 34.2m-48.3-97.1v65.6c0.536 14 8.5 27.2 23.5 32.2 4.72 2.01 7.91 1.85 13.4 1.64 4.01-0.153 7.83-0.957 11.4-2.3m-24.8 0.665-1.82-80.7m26.6 80.1v-67.6" />
+              <rect x="200" y="183" width="72.3" height="108" rx="40" />
+            </g>
+            <g data-petal="15">
+              <path
+                d="m256 158-0.5-24c0.5-8-6.72-14.7-16.3-15.8-2.61 0.109-6.71 0.236-8.95 1.32m-11.2 38.5 0.5-26c0.169-6.3 4.95-9.72 10.7-12.5v32.5" />
+              <rect x="215" y="115" width="44.3" height="56" rx="18.7" />
+            </g>
+            <g data-petal="14">
+              <path
+                d="m289 76.1-4.88 20.4c-1.68 8.34-9.89 10.8-19.4 8.87-2.46-0.871-5.76-1.33-7.61-2.89m-0.87-33.4-5.66 18.8c-1.46 5.27 1.74 10.5 6.53 14.5l6.89-24.9" />
+              <rect transform="matrix(.309 -.951 .927 .374 0 0)" x="-.414" y="262" width="53.4" height="40.8"
+                rx="17.1" />
+            </g>
+            <g data-petal="13">
+              <path
+                d="m186 72.5 5.47 22.5c1.91 9.19 10.3 12.2 19.8 10.4 2.46-0.87 5.77-1.26 7.61-2.91m0-36.5 6.21 20.8c1.62 5.82-1.48 11.4-6.21 15.7l-7.61-27.5" />
+              <rect transform="matrix(.97 -.242 -.308 -.951 0 0)" x="150" y="-154" width="40.2" height="50.8"
+                rx="16.5" />
+            </g>
+            <g data-petal="3">
+              <path
+                d="m170 381 23.5-44.7c6.56-12 2.95-26.6-8.06-32.6-3.07-1.68-6.4-2.52-9.74-2.59m-43.5 58.7 21.5-45.4c4.73-8.64 13.4-13.6 22.1-13.4l-24.7 48.9" />
+              <rect transform="matrix(-.436 .9 .9 .436 165 294)" width="75" height="44" rx="19.5" />
+            </g>
+            <g data-petal="4">
+              <path
+                d="m303 382-23.3-44.8c-6.51-12-2.84-26.6 8.2-32.6 3.08-1.67 6.41-2.49 9.75-2.55m43.3 58.9-21.3-45.4c-4.69-8.66-13.4-13.6-22-13.5l24.5 49" />
+              <rect transform="matrix(.435 .9 -.9 .435 477 7.21)" x="187" y="275" width="69" height="44" rx="19.5" />
+            </g>
+            <g data-petal="2">
+              <path
+                d="m214 397-0.653-54.5c-0.847-14 5.95-20.3 15.2-24m31 79.6 1.2-57.4c-0.376-9.84-5.7-19.1-15.7-22.6-3.15-1.42-5.27-1.31-8.92-1.17-2.67 0.102-5.22 0.661-7.58 1.6m16.5-0.433-1 67m-15.5-66.6 0.5 57.6" />
+              <rect transform="rotate(90)" x="319" y="-261" width="75.7" height="48" rx="19.5" />
+            </g>
+            <g data-petal="6">
+              <path
+                d="m367 323-34.6-24.8c-9.48-6.54-11.8-19.6-5.21-29.2 1.84-2.67 4.19-4.79 6.81-6.31m55.5 27.1-33.2-26.2c-6.83-4.71-15.5-4.75-22.3-0.824l37 27.6" />
+              <rect transform="matrix(.797 .605 -.605 .797 341 -80)" x="198" y="264" width="64.7" height="43.4"
+                rx="19.5" />
+            </g>
+            <g data-petal="8">
+              <path
+                d="m397 249-36.5-6.5c-10.7-1.48-18.2-10.8-16.5-21.5 0.478-2.98 1.89-7.34 3.5-9.7m54 0-35.5-7.59c-7.71-1.07-14.4 1.51-18.5 7.59l39.5 8.61" />
+              <rect transform="matrix(.983 .182 -.204 .979 349 197)" width="63" height="45.6" rx="19.5" />
+            </g>
+            <g data-petal="10">
+              <path
+                d="m391 170-27.5 10c-9.24 3.48-21.7-0.679-25-10-0.918-2.6-2.47-8.03-2.21-10.6m41.2-22.9-29.6 8.68c-6.66 2.51-10.9 7.5-11.6 14.2l34.2-9.87" />
+              <rect transform="matrix(.951 -.31 .289 .958 330 148)" width="61.7" height="42.2" rx="18.9" />
+            </g>
+            <g data-petal="12">
+              <path
+                d="m352 108-17.4 19.3c-6.75 8.23-16.6 7.58-25.1 1.7-1.98-1.92-5.58-4.74-6.52-7.15m21.1-36-18.4 18.8c-4.68 5.04-5.11 10.9-2.67 17.1l21.8-21.2" />
+              <rect transform="matrix(.696 -.718 .702 .712 291 114)" width="60.6" height="45.1" rx="18.9" />
+            </g>
+            <g data-petal="11">
+              <path
+                d="m122 107 18 20c7 8.5 17 8 25.5 2.17 1.98-1.92 5.59-4.73 6.51-7.17m-22-37 19 19.5c4.84 5.22 5.37 11.2 3 17.5l-22.5-22" />
+              <rect transform="matrix(-.696 -.718 -.702 .712 183 115)" width="60.6" height="41.4" rx="18.9" />
+            </g>
+            <g data-petal="9">
+              <path
+                d="m84.5 171 27.5 10c9.24 3.48 21.7-0.679 25-10 0.918-2.6 2.47-8.03 2.21-10.6m-41.2-22.9 29.6 8.68c6.66 2.51 10.9 7.5 11.6 14.2l-34.2-9.87" />
+              <rect transform="matrix(-.956 -.292 -.272 .962 0 0)" x="-179" y="99.5" width="59.2" height="42"
+                rx="18.9" />
+            </g>
+            <g data-petal="7">
+              <path
+                d="m77 248 37.5-6.5c10.4-1.45 16.5-12.7 14.8-23.3-0.477-2.98-1.59-5.71-3.17-8.07m-52.2 0 36.5-7.59c7.51-1.04 11.6 1.5 15.7 7.59l-38.2 8.07" />
+              <rect transform="matrix(-.99 .139 .161 .987 0 0)" x="-92.8" y="214" width="62" height="43.3" rx="19" />
+            </g>
+            <g data-petal="5">
+              <path
+                d="m104 326 36.7-28.5c9.48-6.54 11.8-19.6 5.21-29.2-1.84-2.67-4.19-4.79-6.81-6.31m-56.1 29.5 34.5-28c6.83-4.71 14.8-5.38 21.6-1.45l-37.6 29.5" />
+              <rect transform="matrix(-.796 .605 .605 .796 134 252)" width="69" height="40.1" rx="19.5" />
+            </g>
+          </g>
+        </svg>
+        <b class="hd-tag g">G</b>
+        <b class="hd-tag-n hd-n1">1</b>
+        <b class="hd-tag-n hd-n15">15</b>
+      </div>
+      <button class="hd-tuk" data-petal="0">тук</button>
+    </div>
+    <div class="hd-controls hd-bottom">
+      <button class="hd-share"><svg xmlns="http://www.w3.org/2000/svg" width="51" height="51" fill="none">
+          <path d="M21.3463 16.646L26.071 11.9213L30.7957 16.646" stroke="#70A8A9" stroke-width="2.4382"
+            stroke-linecap="round" />
+          <path d="M25.972 12.1787V27.8551" stroke="#70A8A9" stroke-width="2.4382" stroke-linecap="round" />
+          <path fill-rule="evenodd" clip-rule="evenodd"
+            d="M22.8883 19.6572C20.004 19.9335 17.7484 22.3635 17.7484 25.3202V30.3893C17.7484 33.5313 20.2955 36.0784 23.4376 36.0784H28.5066C31.6487 36.0784 34.1958 33.5313 34.1958 30.3893V25.3202C34.1958 22.3635 31.9403 19.9336 29.056 19.6572V22.1155C30.5898 22.3765 31.7576 23.712 31.7576 25.3202V30.3893C31.7576 32.1847 30.3021 33.6402 28.5066 33.6402H23.4376C21.6421 33.6402 20.1866 32.1847 20.1866 30.3893V25.3202C20.1866 23.712 21.3544 22.3765 22.8883 22.1155V19.6572Z"
+            fill="#70A8A9" />
+        </svg></button>
+
+      <button class="hd-rec-play hd-rec hd-visible"><svg width="51" height="51">
+          <g>
+            <rect x="20.3931" y="10.6997" width="10.5002" height="21.0003" rx="5.25008" fill="#70A8A9" />
+            <path
+              d="M17.562 26.4503C17.562 28.5935 18.4134 30.649 19.9289 32.1645C21.4444 33.68 23.4998 34.5314 25.6431 34.5314C27.7863 34.5314 29.8417 33.68 31.3572 32.1645C32.8727 30.649 33.7241 28.5935 33.7241 26.4503"
+              stroke="#70A8A9" stroke-width="2.16191" fill="none" />
+            <path d="M25.6431 35.8906V44.7722" stroke="#70A8A9" stroke-width="2.4382" stroke-linecap="round" />
+          </g>
+          <rect x="15" y="15" width="21" height="21" rx="5.68914" fill="#70A8A9" />
+        </svg></button>
+
+      <div class="hd-player">
+        <button class="hd-rec-play hd-play"><svg width="51" height="51">
+            <g>
+              <path id="playpath"
+                d="M 36.062 22.853 C 38.113 24.03 38.113 26.97 36.062 28.147 L 22.216 36.086 C 20.165 37.262 17.6 35.792 17.6 33.44 L 17.6 17.56 C 17.6 15.208 20.165 13.738 22.216 14.914 L 36.062 22.853 Z"
+                fill="#70A8A9" />
+            </g>
+            <rect x="15" y="15" width="21" height="21" rx="5.68914" fill="#70A8A9" />
+          </svg></button>
+        <div class="hd-timeline"><input type="range"></div>
+      </div>
+      <button class="hd-close"><svg xmlns="http://www.w3.org/2000/svg" width="51" height="51" fill="none">
+          <path d="M18.4064 18.5356L32.595 32.7243 M18.4064 32.7241L32.595 18.5355" stroke="#70A8A9"
+            stroke-width="2.4382" stroke-linecap="round" />
+        </svg></button>
+    </div>
+  </div>
+
+</body>
+
+</html>
