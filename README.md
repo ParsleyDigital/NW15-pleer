@@ -1,5 +1,30 @@
-Put this folder anywhere on the your site
+Код для вставки на сайте чтобы использовать плеер как iframe
 
-Create on the page, where the widget whill used, empty element with id="hdrum-vidget"
+```
+<div id="NW15pleer-container" style="width: 100%"></div>
+<script>
+  window.onload = function() {
+    console.log('Page fully loaded, adding iframe');
 
-link hdrum.css and hdrum.js to the page (important: hdrum.js must be included as a module!)
+    const iframe = document.createElement('iframe');
+    iframe.id = 'NW15pleer';
+    iframe.src = 'https://demo.parsley.digital/glukofon/';
+    iframe.style.width = '100%';
+    iframe.style.border = 'none';
+
+    const container = document.getElementById('NW15pleer-container');
+    if (container) {
+      container.appendChild(iframe);
+      window.addEventListener('message', (event) => {
+        console.log('addEventListener', event.data);
+        if (event.data.type === 'resize' && event.data.height) {
+          console.log('iframeHeight', event.data.height);
+          document.getElementById('NW15pleer').style.height = event.data.height + 'px';
+        }
+      });
+    } else {
+      console.error('Container not found');
+    }
+  };
+</script>
+```
