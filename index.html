@@ -258,7 +258,17 @@
         </svg></button>
     </div>
   </div>
-
+  <script type="text/javascript">
+    window.onload = function() {
+      function sendHeight() {
+        const height = document.body.scrollHeight;
+        console.log('innerHeight', height);
+        window.parent.postMessage({ type: 'resize', height: height }, 'https://kosmosky.ru');
+      }
+      sendHeight();
+      window.onresize = sendHeight;
+    };
+  </script>
 </body>
 
 </html>
