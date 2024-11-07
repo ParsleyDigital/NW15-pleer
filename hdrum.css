@@ -127,6 +127,8 @@ dl.hd-notes {
    }
    .hd-drum {
       margin: 0 -53px 0;
+      box-shadow: 0em 4em 4em -2em #0006, #fff 4px 1px 0 -2.6px inset,
+         #000a inset -0.4px -0.2px 1px -0.2px, 0 0 3em #0001 inset;
    }
    .hd-main > button {
       margin-top: -15px;
