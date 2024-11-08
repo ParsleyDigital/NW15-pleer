@@ -72,7 +72,7 @@ $('.hd-drum>svg').clone().addClass('hd-drum2').appendTo('.hd-drum')
 
 const loading = [];
 
-const keys = '0123456789QWERTY';
+const keys = '01234567QWERTYUI';
 $win.keydown(e => {
   if (e.originalEvent.repeat) return;
   play(keys.indexOf(e.code.at(-1)))
