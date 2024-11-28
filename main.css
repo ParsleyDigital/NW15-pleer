@@ -257,9 +257,10 @@ svg.hd-drum2 {
 path.hd-white {
    stroke: #fff;
    opacity: 0.6;
-   transform: translate(0.5px, 0.2px);
+   /* transform: translate(0.5px, 0.2px);
    /* display: none; */
-   stroke-width: 3.1px;
+   /* stroke-width: 3.1px; */
+   stroke-width: 1.5px;
 }
 .hd-drum2 path {
    filter: url(./#hd-glow);
