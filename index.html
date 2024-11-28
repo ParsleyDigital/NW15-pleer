@@ -262,7 +262,7 @@
       function sendHeight() {
         const height = document.body.scrollHeight;
         console.log('innerHeight', height);
-        window.parent.postMessage({ type: 'resize', height: height }, 'https://kosmosky.ru');
+        window.parent.postMessage({ type: 'resize', height: height }, 'https://en.kosmosky.com');
       }
       sendHeight();
       window.onresize = sendHeight;
