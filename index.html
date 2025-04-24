@@ -8,87 +8,96 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="Cache-Control" content="no-cache" />
   <title>New Wave 15 player</title>
-  <link rel="stylesheet" type="text/css" href="main.min.css?v=1">
+  <link rel="stylesheet" type="text/css" href="main.min.css?v=13">
   <script type="text/javascript" src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-  <script type="module" src="hdrum.min.js?v=1"></script>
+  <script type="module" src="hdrum.min.js?v=13"></script>
 </head>
 
 <body>
-  <svg class="logo" width="129" height="50" viewBox="0 0 129 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path
-      d="M4.99542 23H1.40458V0.076337H5.31603L18.3328 19.3771H17.0824V0.076337H20.6733V23H16.7618L3.71298 3.69924H4.99542V23ZM39.6847 23H23.9107V0.076337H39.6847V3.21832H27.5977V19.858H39.6847V23ZM39.0756 12.9328H27.2771V9.79084H39.0756V12.9328ZM65.7915 23H61.6556L56.3976 4.59695H56.8464L51.5564 23H47.4205L40.6876 0.076337H44.6312L50.0815 20.1145H49.0876L54.8586 0.076337H58.3854L64.1563 20.1145H63.2586L68.677 0.076337H72.5243L65.7915 23ZM25.258 49H21.1221L15.8641 30.5969H16.313L11.0229 49H6.88702L0.154198 26.0763H4.09771L9.54809 46.1145H8.5542L14.3252 26.0763H17.8519L23.6229 46.1145H22.7252L28.1435 26.0763H31.9908L25.258 49ZM46.8965 43.4855H33.6873V40.3435H46.8965V43.4855ZM51.4491 49H47.5377L39.6827 28.5771H40.9011L33.0461 49H29.2629L38.3362 26.0763H42.3759L51.4491 49ZM60.427 49H56.6438L47.6667 26.0763H51.6423L59.1766 46.3069H58.0224L65.5568 26.0763H69.4362L60.427 49ZM87.0437 49H71.2696V26.0763H87.0437V29.2183H74.9567V45.858H87.0437V49ZM86.4345 38.9328H74.6361V35.7908H86.4345V38.9328Z"
-      fill="black"></path>
-    <path
-      d="M96.3987 24.5223H107.938V49H105.106L105.141 26.9701H96.3987V24.5223ZM124.938 24.2776V32.9846L127.771 33.0545V24.2776H124.938ZM108.993 29.313C108.993 25.7112 111.196 24.3125 115.147 24.2776L124.938 24.3125V26.7253H115.322C113.923 26.7253 112.28 27.3897 112.315 29.1381C112.35 30.8516 118.154 30.8166 123.679 33.2294C126.302 34.4183 128.155 36.6563 128.015 40.7126C127.771 46.0976 123.504 49.2448 117.42 48.9301C106.545 48.3706 108.118 36.0968 111.72 34.0337H112.49C108.468 36.2017 107.769 47.2516 118.014 46.4823C122.071 46.1676 125.218 44.2443 125.218 40.7126C125.218 30.8516 108.993 35.2925 108.993 29.313Z"
-      fill="#6CAFAE"></path>
-  </svg>
-  <h1>Виртуальный плеер</h1>
+  <h2>new wave 15</h2>
+  <h1>Виртуальный глюкофон</h1>
+
+  <div class="drum-config-mobile">
+    <div class="drum-config-mobile-title">Настройка</div>
+    <div class="drum-config-mobile-inner">
+      <a class="green-drum-link green-drum-link__active" href="#">G maj</a>
+      <a class="white-drum-link" href="#">G min</a>
+    </div>
+  </div>
 
   <div id="hdrum-vidget">
     <dl class="hd-controls hd-notes">
-      <div data-petal="0">
+      <div class="hd-note" data-petal="0">
         <dt>0</dt>
         <dd>тук</dd>
       </div>
-      <div data-petal="1">
+      <div class="hd-note" data-petal="1">
         <dt>1</dt>
         <dd>G</dd>
       </div>
-      <div data-petal="2">
+      <div class="hd-note" data-petal="2">
         <dt>2</dt>
         <dd>A</dd>
       </div>
-      <div data-petal="3">
+      <div class="hd-note" data-petal="3">
         <dt>3</dt>
-        <dd>B</dd>
+        <dd>B<sub class="white">♭</sub></dd>
       </div>
-      <div data-petal="4">
+      <div class="hd-note" data-petal="4">
         <dt>4</dt>
         <dd>C</dd>
       </div>
-      <div data-petal="5">
+      <div class="hd-note" data-petal="5">
         <dt>5</dt>
         <dd>D</dd>
       </div>
-      <div data-petal="6">
+      <div class="hd-note" data-petal="6">
         <dt>6</dt>
-        <dd>E</dd>
+        <dd>E<sub class="white">♭</sub></dd>
       </div>
-      <div data-petal="7">
+      <div class="hd-note" data-petal="7">
         <dt>7</dt>
-        <dd>F<sub>#</sub></dd>
+        <dd>F<sub class="green">#</sub></dd>
       </div>
-      <div data-petal="8">
+      <div class="hd-note" data-petal="8">
         <dt>Q</dt>
         <dd>G</dd>
       </div>
-      <div data-petal="9">
+      <div class="hd-note" data-petal="9">
         <dt>W</dt>
         <dd>A</dd>
       </div>
-      <div data-petal="10">
+      <div class="hd-note" data-petal="10">
         <dt>E</dt>
-        <dd>B</dd>
+        <dd>B<sub class="white">♭</sub></dd>
       </div>
-      <div data-petal="11">
+      <div class="hd-note" data-petal="11">
         <dt>R</dt>
         <dd>C</dd>
       </div>
-      <div data-petal="12">
+      <div class="hd-note" data-petal="12">
         <dt>T</dt>
         <dd>D</dd>
       </div>
-      <div data-petal="13">
+      <div class="hd-note" data-petal="13">
         <dt>Y</dt>
-        <dd>E</dd>
+        <dd>E<sub class="white">♭</sub></dd>
       </div>
-      <div data-petal="14">
+      <div class="hd-note" data-petal="14">
         <dt>U</dt>
-        <dd>F<sub>#</sub></dd>
+        <dd>F<sub class="green">#</sub></dd>
       </div>
-      <div data-petal="15">
+      <div class="hd-note" data-petal="15">
         <dt>I</dt>
         <dd>G</dd>
+      </div>
+
+      <div class="drum-config">
+        <div class="drum-config-title">Настройка</div>
+        <div class="drum-config-inner">
+          <a class="green-drum-link green-drum-link__active" href="#">G maj</a>
+          <a class="white-drum-link" href="#">G min</a>
+        </div>
       </div>
     </dl>
     <div class="hd-controls hd-main">
@@ -106,6 +115,30 @@
           <filter id="hd-glow" color-interpolation-filters="sRGB" height="300%" width="300%" x="-100%" y="-100%">
 
             <feMorphology operator="dilate" radius="1.8" result="thicken" />
+
+            <feGaussianBlur stdDeviation="4" result=1 />
+            <feGaussianBlur stdDeviation="3" result=2 />
+            <feGaussianBlur stdDeviation="5" result=3 />
+            <feGaussianBlur stdDeviation="5" result=4 />
+            <feGaussianBlur stdDeviation="5" result=5 />
+            <feGaussianBlur stdDeviation="10" result="6" />
+            <feGaussianBlur stdDeviation="10" result="7" />
+
+            <!--	Layer the effects together -->
+            <feMerge>
+              <feMergeNode in="6" />
+              <feMergeNode in="5" />
+              <feMergeNode in="1" />
+              <feMergeNode in="3" />
+              <feMergeNode in="SourceGraphic" />
+              <feMergeNode in="7" />
+              <feMergeNode in="7" />
+            </feMerge>
+          </filter>
+
+          <filter id="hd-glow-white" color-interpolation-filters="sRGB" height="300%" width="300%" x="-100%" y="-100%">
+
+            <feMorphology operator="dilate" radius="0.8" result="thicken" />
 
             <feGaussianBlur stdDeviation="4" result=1 />
             <feGaussianBlur stdDeviation="3" result=2 />
@@ -221,23 +254,23 @@
     </div>
     <div class="hd-controls hd-bottom">
       <button class="hd-share"><svg xmlns="http://www.w3.org/2000/svg" width="51" height="51" fill="none">
-          <path d="M21.3463 16.646L26.071 11.9213L30.7957 16.646" stroke="#70A8A9" stroke-width="2.4382"
+          <path d="M21.3463 16.646L26.071 11.9213L30.7957 16.646" stroke="var(--color)" stroke-width="2.4382"
             stroke-linecap="round" />
-          <path d="M25.972 12.1787V27.8551" stroke="#70A8A9" stroke-width="2.4382" stroke-linecap="round" />
+          <path d="M25.972 12.1787V27.8551" stroke="var(--color)" stroke-width="2.4382" stroke-linecap="round" />
           <path fill-rule="evenodd" clip-rule="evenodd"
             d="M22.8883 19.6572C20.004 19.9335 17.7484 22.3635 17.7484 25.3202V30.3893C17.7484 33.5313 20.2955 36.0784 23.4376 36.0784H28.5066C31.6487 36.0784 34.1958 33.5313 34.1958 30.3893V25.3202C34.1958 22.3635 31.9403 19.9336 29.056 19.6572V22.1155C30.5898 22.3765 31.7576 23.712 31.7576 25.3202V30.3893C31.7576 32.1847 30.3021 33.6402 28.5066 33.6402H23.4376C21.6421 33.6402 20.1866 32.1847 20.1866 30.3893V25.3202C20.1866 23.712 21.3544 22.3765 22.8883 22.1155V19.6572Z"
-            fill="#70A8A9" />
+            fill="var(--color)" />
         </svg></button>
 
       <button class="hd-rec-play hd-rec hd-visible"><svg width="51" height="51">
           <g>
-            <rect x="20.3931" y="10.6997" width="10.5002" height="21.0003" rx="5.25008" fill="#70A8A9" />
+            <rect x="20.3931" y="10.6997" width="10.5002" height="21.0003" rx="5.25008" fill="var(--color)" />
             <path
               d="M17.562 26.4503C17.562 28.5935 18.4134 30.649 19.9289 32.1645C21.4444 33.68 23.4998 34.5314 25.6431 34.5314C27.7863 34.5314 29.8417 33.68 31.3572 32.1645C32.8727 30.649 33.7241 28.5935 33.7241 26.4503"
-              stroke="#70A8A9" stroke-width="2.16191" fill="none" />
-            <path d="M25.6431 35.8906V44.7722" stroke="#70A8A9" stroke-width="2.4382" stroke-linecap="round" />
+              stroke="currentColor" stroke-width="2.16191" fill="none" />
+            <path d="M25.6431 35.8906V44.7722" stroke="var(--color)" stroke-width="2.4382" stroke-linecap="round" />
           </g>
-          <rect x="15" y="15" width="21" height="21" rx="5.68914" fill="#70A8A9" />
+          <rect x="15" y="15" width="21" height="21" rx="5.68914" fill="var(--color)" />
         </svg></button>
 
       <div class="hd-player">
@@ -245,14 +278,14 @@
             <g>
               <path id="playpath"
                 d="M 36.062 22.853 C 38.113 24.03 38.113 26.97 36.062 28.147 L 22.216 36.086 C 20.165 37.262 17.6 35.792 17.6 33.44 L 17.6 17.56 C 17.6 15.208 20.165 13.738 22.216 14.914 L 36.062 22.853 Z"
-                fill="#70A8A9" />
+                fill="var(--color)" />
             </g>
-            <rect x="15" y="15" width="21" height="21" rx="5.68914" fill="#70A8A9" />
+            <rect x="15" y="15" width="21" height="21" rx="5.68914" fill="var(--color)" />
           </svg></button>
         <div class="hd-timeline"><input type="range"></div>
       </div>
       <button class="hd-close"><svg xmlns="http://www.w3.org/2000/svg" width="51" height="51" fill="none">
-          <path d="M18.4064 18.5356L32.595 32.7243 M18.4064 32.7241L32.595 18.5355" stroke="#70A8A9"
+          <path d="M18.4064 18.5356L32.595 32.7243 M18.4064 32.7241L32.595 18.5355" stroke="var(--color)"
             stroke-width="2.4382" stroke-linecap="round" />
         </svg></button>
     </div>
